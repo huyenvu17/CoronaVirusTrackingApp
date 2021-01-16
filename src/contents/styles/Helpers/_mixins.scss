@@ -1,0 +1,41 @@
+@mixin styleText($color, $fontSize, $fontWeight, $text-transform) {
+  color: $color;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  text-transform: $text-transform;
+}
+@mixin textStyle($fs, $fw, $color) {
+  font-size: $fs;
+  font-weight: $fw;
+  color: $color;
+}
+// responsive
+@mixin responsive($screen) {
+  @if map-has-key($map: $breakpoints, $key: $screen) {
+    //576px
+    $value: map-get($map: $breakpoints, $key: $screen);
+    @media screen and (max-width: $value){
+      @content;
+    }
+  }
+  @else {
+    @warn "please re-enter";
+  }
+}
+
+// heading
+.heading-lg-upper{
+  @include styleText($color-black-0, 2.5em, $fw-bold-0, uppercase);
+}
+.heading-lg-cap{
+  @include styleText($color-black-0, 2.5em, $fw-bold-0, capitalize);
+}
+.heading-md-upper {
+  @include styleText($color-black-0, 1.2em, $fw-bold-0, uppercase)
+}
+.heading-md-cap {
+  @include styleText($color-black-0, 1.2em, $fw-bold-0, capitalize)
+}
+.text-normal{
+  @include styleText($color-black-0, 1em, 300, initial)
+}

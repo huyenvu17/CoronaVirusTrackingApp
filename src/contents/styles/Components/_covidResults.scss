@@ -1,0 +1,41 @@
+.covidbycountry__results{
+    margin-top: 1em;
+    border-radius: 5px;
+    background: $color-gray-1;
+    .results__countryname {
+      padding: 1em;
+      padding-bottom: 0;
+      font-weight: bold;
+  }
+  .results__statistics{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    padding: 1em;
+    .statistics__item {
+      height: 150px;
+      background: #ddd;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 5px;
+      &.confirmedbg{
+        background-color: $color-yellow;
+      }
+      &.recoveredbg{
+        background-color: $color-green;
+      }
+      &.deadbg{
+        background-color: $color-red;
+      }
+      .results__status{
+        margin-bottom: 0.2em;
+      }
+      .results__number{
+        font-size: 1.5em;
+        font-weight: $fw-bold-1;
+      }
+    }
+  }
+}

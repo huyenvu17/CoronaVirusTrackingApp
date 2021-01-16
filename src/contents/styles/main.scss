@@ -1,0 +1,11 @@
+//helpers
+@import '../styles/Helpers/variables';
+@import '../styles/Helpers/mixins';
+//base 
+@import '../styles/Base/reset';
+//layout
+@import '../styles/Layout/container';
+//components
+@import './Components/covidWorldWide';
+@import '../styles/Components/covidResults';
+@import '../styles//Components/covidSearch';

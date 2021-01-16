@@ -1,0 +1,23 @@
+.covidworldwide{
+  margin-top: 2em;
+  .covidworldwide__list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    background-color: $color-blue;
+    border-radius: 5px;
+    padding: 1em;
+    text-align: center;
+    color: $color-white-0;
+    .covidworldwide__item:not(:last-child){
+      border-right: 1px solid;
+      
+    }
+    .covidworldwide__status{
+      margin-bottom: 0.5em;
+    }
+    .covidworldwide__number{
+      font-weight: $fw-bold-1;
+    }
+  }
+}
